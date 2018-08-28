@@ -8,8 +8,9 @@
     navigator.compass.watchHeading(onSuccess, onError, options);
     
     function onSuccess(heading) {
-        $("#degree").text(heading.magneticHeading);
-        $("#heading").text(degToCompass(heading.magneticHeading));
+        var degree = heading.magneticHeading;
+        $("#degree").text(degree);
+        $("#heading").text(degToCompass(degree));
     }
 
     function onError(error) {
