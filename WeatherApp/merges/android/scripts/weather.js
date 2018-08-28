@@ -2,6 +2,11 @@
 
 function getWeatherWithZipCode() {
     var zipcode = $('#zip-code-input').val();
+
+    if (zipcode == 72015) {
+        alert("Go Panthers!");
+    }
+
     var queryString =
         'http://api.openweathermap.org/data/2.5/weather?zip='
         + zipcode + ',us&appid=' + OpenWeatherAppKey + '&units=imperial';

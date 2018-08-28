@@ -1,11 +1,11 @@
 ﻿function getCompassDirection() {
 
+    // https://blog.phonegap.com/migrating-from-the-cordova-device-orientation-plugin-8442b869e6cc
     var options = {
         frequency: 3000
     };
 
     navigator.compass.watchHeading(onSuccess, onError, options);
-    navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
     
     function onSuccess(heading) {
         $("#degree").text(heading.magneticHeading);
