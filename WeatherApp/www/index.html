@@ -23,6 +23,7 @@ http://api.openweathermap.org https://ssl.gstatic.com 'unsafe-eval'; style-src '
         <div data-role="header" class="header">
             <h1 id="app-title">Weather App</h1>
             <a href="/" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" rel="external">Home</a>
+            <a href="settings.html" class="ui-btn ui-btn-right ui-btn-corner-all ui-icon-user ui-btn-icon-notext" rel="external">Settings</a>
         </div>
 
         <div role="main" class="ui-content">
@@ -35,13 +36,13 @@ http://api.openweathermap.org https://ssl.gstatic.com 'unsafe-eval'; style-src '
             <ul id="weather-data" data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow not-displayed">
                 <li data-role="list-divider" id="title" class="ui-li-divider ui-bar-a"></li>
                 <li><span id="summary"><span id="temperature"></span> F <img src="" /></span></li>
-                <li>Wind: <span id="wind"></span> knots</li>
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Visibility: <span id="visibility"></span></li>
-                <li>Sunrise: <span id="sunrise"></span></li>
-                <li>Sunset: <span id="sunset"></span></li>
-                <li>Degree: <span id="degree">0</span>&deg;</li>
-                <li>Heading: <span id="heading"></span></li>
+                <li id="wind-data">Wind: <span id="wind"></span> knots</li>
+                <li id="humidity-data">Humidity: <span id="humidity"></span> %</li>
+                <li id="visibility-data">Visibility: <span id="visibility"></span></li>
+                <li id="sunrise-data">Sunrise: <span id="sunrise"></span></li>
+                <li id="sunset-data">Sunset: <span id="sunset"></span></li>
+                <li id="degree-data">Degree: <span id="degree">...</span>&deg;</li>
+                <li id="heading-data">Heading: <span id="heading">...</span></li>
             </ul>
 
             <div id="error-msg" class="not-displayed">
@@ -54,11 +55,12 @@ http://api.openweathermap.org https://ssl.gstatic.com 'unsafe-eval'; style-src '
         </footer>-->
 
     </div>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
+
     <script src="scripts/jquery-1.8.0.min.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="scripts/index.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/compass.js"></script>
 </body>

@@ -53,6 +53,20 @@ function onGetLocationError(error) {
     $('#get-weather-btn').prop('disabled', false);
 }
 
+function configureWeatherData() {
+
+    settings = JSON.parse(localStorage.getItem("settings"));
+
+    if (!settings.wind) { $("#wind-data").hide(); } else { $("#wind-data").show(); }
+    if (!settings.visibility) { $("#visibility-data").hide(); } else { $("#visibility-data").show(); }
+    if (!settings.humidity) { $("#humidity-data").hide(); } else { $("#humidity-data").show(); }
+    if (!settings.sunrise) { $("#sunrise-data").hide(); } else { $("#sunrise-data").show(); }
+    if (!settings.sunset) { $("#sunset-data").hide(); } else { $("#sunset-data").show(); }
+    if (!settings.degree) { $("#degree-data").hide(); } else { $("#degree-data").show(); }
+    if (!settings.heading) { $("#heading-data").hide(); } else { $("#heading-data").show(); }
+
+}
+
 function showWeatherData(results) {
 
     if (results.weather.length) {
@@ -70,6 +84,9 @@ function showWeatherData(results) {
 
         var sunsetDate = new Date(results.sys.sunset * 1000);
         $('#sunset').text(sunsetDate.toLocaleTimeString());
+
+        configureWeatherData();
+        getCompassDirection();
 
     } else {
         $('#weather-data').hide();
