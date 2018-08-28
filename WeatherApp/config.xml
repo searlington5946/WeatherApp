@@ -104,4 +104,5 @@
   </platform>
   <access origin="http://api.openweathermap.org/" />
   <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
+  <plugin name="cordova-plugin-device-orientation" spec="~2.0.1" />
 </widget>
