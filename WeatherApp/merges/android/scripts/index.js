@@ -13,6 +13,8 @@
         document.addEventListener('resume', onResume.bind(this), false);
         $('#get-weather-btn').click(getWeatherWithZipCode);
 
+        $('#app-title').text("Android Weather");
+
         //Populate the page with the current location's weather conditions
         getWeatherWithGeoLocation();
         getCompassDirection();

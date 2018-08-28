@@ -5,6 +5,8 @@ function getWeatherWithZipCode() {
 
     if (zipcode == 72015) {
         alert("Go Panthers!");
+        $(".ui-bar-inherit.ui-header.header").css("background-color", "#520000");
+        $("#app-title").text("Panther Weather");
     }
 
     var queryString =
@@ -52,8 +54,6 @@ function onGetLocationError(error) {
 }
 
 function showWeatherData(results) {
-
-    $('#app-title').text("Android Weather");
 
     if (results.weather.length) {
         $('#error-msg').hide();
