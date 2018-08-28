@@ -11,15 +11,15 @@ This is a completed solution of the WeatherApp assignment for CIS2543 with some 
 ## Improvements
 
 * Added this README.md
-* Added a settings page (see: settings.js)
-* Added degree and heading information to the weather data list (see: compass.js)
+* Added a settings page (see: [settings.js](https://github.com/searlington5946/WeatherApp/blob/master/WeatherApp/www/scripts/settings.js))
+* Added degree and heading information to the weather data list for Android phones (see: [compass.js](https://github.com/searlington5946/WeatherApp/blob/master/WeatherApp/merges/android/scripts/compass.js))
 * Created favicon.ico
 * Added a fun easter egg (read the source to find it!)
 * Commented out annoying "Cordova Demo" footer
 
 ## Known Bugs
 
-* Currently works best when simulated in browser.
+* Currently works best when simulated in browser
 * Various bugs with Google Emulator
 
 ## TODO
