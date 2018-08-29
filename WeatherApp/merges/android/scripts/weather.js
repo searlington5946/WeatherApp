@@ -5,7 +5,8 @@ function getWeatherWithZipCode() {
 
     if (zipcode == 72015) {
         alert("Go Panthers!");
-        $(".ui-bar-inherit.ui-header.header").css("background-color", "#520000");
+        $(".header").css("background-color", "#520000");
+        $(".header").css("border-color", "#520000");
         $("#app-title").text("Panther Weather");
     }
 
