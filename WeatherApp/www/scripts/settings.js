@@ -6,7 +6,7 @@ var sunsetEnabled = true;
 var degreeEnabled = true;
 var headingEnabled = true;
 
-function setSettings() {
+function saveSettings() {
 
     windEnabled = $("#wind-check").prop('checked');
     humidityEnabled = $("#humidity-check").prop('checked');
@@ -32,7 +32,7 @@ function setSettings() {
 
 }
 
-function getSettings() {
+function loadSettings() {
 
     var settings = JSON.parse(localStorage.getItem("settings"));
 

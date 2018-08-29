@@ -32,8 +32,8 @@
 // and after all widgets have had an opportunity to enhance the contained markup.
 $('#settings-page').on('pagecreate', function (event) {
 
-    $('#save-button').click(function () { setSettings(); configureWeatherData(); });
+    $('#save-button').click(function () { saveSettings(); configureWeatherData(); });
 
-    getSettings();
+    loadSettings();
 
 })
