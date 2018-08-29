@@ -6,22 +6,15 @@ var sunsetEnabled = true;
 var degreeEnabled = true;
 var headingEnabled = true;
 
-$(document).ready(function () {
-
-    $('#set-settings-btn').click(function () { setSettings(); window.location = "index.html" });
-    getSettings();
-
-});
-
 function setSettings() {
 
-    windEnabled = $("#wind").prop('checked');
-    humidityEnabled = $("#humidity").prop('checked');
-    visibilityEnabled = $("#visibility").prop('checked');
-    sunriseEnabled = $("#sunrise").prop('checked');
-    sunsetEnabled = $("#sunset").prop('checked');
-    degreeEnabled = $("#degree").prop('checked');
-    headingEnabled = $("#heading").prop('checked');
+    windEnabled = $("#wind-check").prop('checked');
+    humidityEnabled = $("#humidity-check").prop('checked');
+    visibilityEnabled = $("#visibility-check").prop('checked');
+    sunriseEnabled = $("#sunrise-check").prop('checked');
+    sunsetEnabled = $("#sunset-check").prop('checked');
+    degreeEnabled = $("#degree-check").prop('checked');
+    headingEnabled = $("#heading-check").prop('checked');
 
     localStorage.setItem("settings", JSON.stringify(
 
@@ -37,7 +30,7 @@ function setSettings() {
 
     ));
 
-    window.location = "index.html";
+    //window.location = "#weather-page";
 
 }
 
@@ -45,22 +38,26 @@ function getSettings() {
 
     var settings = JSON.parse(localStorage.getItem("settings"));
 
-    windEnabled = settings.wind;
-    humidityEnabled = settings.humidity;
-    visibilityEnabled = settings.visibility;
-    sunriseEnabled = settings.sunrise;
-    sunsetEnabled = settings.sunset;
-    degreeEnabled = settings.degree;
-    headingEnabled = settings.heading;
+    if (settings != null) {
+
+        windEnabled = settings.wind;
+        humidityEnabled = settings.humidity;
+        visibilityEnabled = settings.visibility;
+        sunriseEnabled = settings.sunrise;
+        sunsetEnabled = settings.sunset;
+        degreeEnabled = settings.degree;
+        headingEnabled = settings.heading;
+
+    }
 
     // have to call refresh to update the element's class
-    $("#wind").prop('checked', settings.wind).checkboxradio('refresh');
-    $("#humidity").prop('checked', settings.humidity).checkboxradio('refresh');
-    $("#visibility").prop('checked', settings.visibility).checkboxradio('refresh');
-    $("#sunrise").prop('checked', settings.sunrise).checkboxradio('refresh');
-    $("#sunset").prop('checked', settings.sunset).checkboxradio('refresh');
-    $("#degree").prop('checked', settings.degree).checkboxradio('refresh');
-    $("#heading").prop('checked', settings.heading).checkboxradio('refresh');
+    $("#wind-check").prop('checked', windEnabled).checkboxradio('refresh');
+    $("#humidity-check").prop('checked', humidityEnabled).checkboxradio('refresh');
+    $("#visibility-check").prop('checked', visibilityEnabled).checkboxradio('refresh');
+    $("#sunrise-check").prop('checked', sunriseEnabled).checkboxradio('refresh');
+    $("#sunset-check").prop('checked', sunsetEnabled).checkboxradio('refresh');
+    $("#degree-check").prop('checked', degreeEnabled).checkboxradio('refresh');
+    $("#heading-check").prop('checked', headingEnabled).checkboxradio('refresh');
 
     return settings;
 

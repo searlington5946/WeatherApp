@@ -25,3 +25,11 @@
         // TODO: This application has been reactivated. Restore application state here.
     };
 })();
+
+$('#settings-page').live('pagecreate', function (event) {
+
+    $('#save-button').click(function () { setSettings(); configureWeatherData(); });
+
+    getSettings();
+
+})

@@ -23,7 +23,7 @@ http://api.openweathermap.org https://ssl.gstatic.com 'unsafe-eval'; style-src '
         <div data-role="header" class="header">
             <h1 id="app-title">Weather App</h1>
             <a href="/" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-home ui-btn-icon-notext" rel="external">Home</a>
-            <a href="settings.html" class="ui-btn ui-btn-right ui-btn-corner-all ui-icon-user ui-btn-icon-notext" rel="external">Settings</a>
+            <a href="#settings-page" data-transition="slide" class="ui-btn ui-btn-right ui-btn-corner-all ui-icon-user ui-btn-icon-notext"">Settings</a>
         </div>
 
         <div role="main" class="ui-content">
@@ -50,9 +50,50 @@ http://api.openweathermap.org https://ssl.gstatic.com 'unsafe-eval'; style-src '
 
         </div>
 
-        <!--<footer data-role="footer" data-position="fixed">
-            <h4>Visual Studio Tools for Cordova Demo</h4>
-        </footer>-->
+        <footer data-role="footer" data-position="fixed">
+            <h4></h4>
+        </footer>
+
+    </div>
+
+    <div data-role="page" id="settings-page">
+
+        <div data-role="header" class="header">
+            <h1 id="settings-title">Settings</h1>
+            <a href="#weather-page" class="ui-btn ui-btn-left ui-btn-corner-all ui-icon-back ui-btn-icon-notext" data-transition="slide" data-direction="reverse">Back</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <form>
+                <fieldset data-role="controlgroup" data-iconpos="right">
+                    <input type="checkbox" name="wind-check" id="wind-check" />
+                    <label for="wind-check">Wind</label>
+
+                    <input type="checkbox" name="humidity-check" id="humidity-check" />
+                    <label for="humidity-check">Humidity</label>
+
+                    <input type="checkbox" name="visibility-check" id="visibility-check" />
+                    <label for="visibility-check">Visibility</label>
+
+                    <input type="checkbox" name="sunrise-check" id="sunrise-check" />
+                    <label for="sunrise-check">Sunrise</label>
+
+                    <input type="checkbox" name="sunset-check" id="sunset-check" />
+                    <label for="sunset-check">Sunset</label>
+
+                    <input type="checkbox" name="degree-check" id="degree-check" />
+                    <label for="degree-check">Degree</label>
+
+                    <input type="checkbox" name="heading-check" id="heading-check" />
+                    <label for="heading-check">Heading</label>
+                </fieldset>
+                <a href="#weather-page" class="ui-btn ui-shadow ui-corner-all" id="save-button" data-transition="slide" data-direction="reverse">Save</a>
+            </form>
+        </div>
+
+        <footer data-role="footer" data-position="fixed">
+            <h4></h4>
+        </footer>
 
     </div>
 
@@ -63,5 +104,6 @@ http://api.openweathermap.org https://ssl.gstatic.com 'unsafe-eval'; style-src '
     <script src="scripts/index.js"></script>
     <script src="scripts/weather.js"></script>
     <script src="scripts/compass.js"></script>
+    <script src="scripts/settings.js"></script>
 </body>
 </html>
