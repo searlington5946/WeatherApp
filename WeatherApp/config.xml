@@ -102,7 +102,7 @@
     <splash src="res/screens/windows/SplashScreen.scale-240.png" width="1152" height="1920" />
     <splash src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" height="1920" />
   </platform>
-  <access origin="http://api.openweathermap.org/" />
+  <access origin="*" />
   <plugin name="cordova-plugin-geolocation" spec="~2.4.3" />
   <plugin name="cordova-plugin-device-orientation" spec="~2.0.1" />
 </widget>

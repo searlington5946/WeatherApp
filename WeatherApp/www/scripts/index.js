@@ -26,7 +26,11 @@
     };
 })();
 
-$('#settings-page').live('pagecreate', function (event) {
+// https://api.jquerymobile.com/1.4/category/events/
+// pagecreate
+// Triggered when the page has been created in the DOM (via ajax or other)
+// and after all widgets have had an opportunity to enhance the contained markup.
+$('#settings-page').on('pagecreate', function (event) {
 
     $('#save-button').click(function () { setSettings(); configureWeatherData(); });
 

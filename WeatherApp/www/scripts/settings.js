@@ -30,8 +30,6 @@ function setSettings() {
 
     ));
 
-    //window.location = "#weather-page";
-
 }
 
 function getSettings() {
