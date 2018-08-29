@@ -34,6 +34,9 @@ $('#settings-page').on('pagecreate', function (event) {
 
     $('#save-button').click(function () { saveSettings(); configureWeatherData(); });
 
+    // user left without saving so just reload the current settings
+    $('#back-button').click(function () { loadSettings(); })
+
     loadSettings();
 
 })
